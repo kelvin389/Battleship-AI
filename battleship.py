@@ -190,11 +190,12 @@ def main():
 
     num_ship_cells = sum(x.count(1) for x in board)
     bot = BattleshipBot(10, 10, num_ship_cells)
-    rand.seed(50)
+    #rand.seed(50)
     
     for i in range(1000):
         shot = bot.take_turn()
         if not shot:
+            print(f"rounds taken: {i}")
             break
 
         x, y = shot
